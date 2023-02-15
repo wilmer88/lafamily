@@ -10,6 +10,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/wilmer88/lafamily/api/database"
+	"github.com/wilmer88/lafamily/api/models"
 
 	_ "github.com/heroku/x/hmetrics/onload"
 	"gorm.io/gorm"
