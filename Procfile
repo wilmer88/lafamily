@@ -1,2 +1,2 @@
-web: cd api && go run main.go
+web: go-getting-started
 build: cd client && npm install && ng build --prod
