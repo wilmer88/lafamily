@@ -20,11 +20,11 @@ func setupRouter() *gin.Engine {
 	})
 
 	userRepo := controllers.New()
-	r.POST("/", userRepo.CreateUser)
-	r.GET("/", userRepo.GetUsers)
-	r.GET("/:id", userRepo.GetUser)
-	r.PUT("/:id", userRepo.UpdateUser)
-	r.DELETE("/:id", userRepo.DeleteUser)
+	r.POST("/lafamily", userRepo.CreateUser)
+	r.GET("/lafamily", userRepo.GetUsers)
+	r.GET("/lafamily/:id", userRepo.GetUser)
+	r.PUT("/lafamily/:id", userRepo.UpdateUser)
+	r.DELETE("/lafamily/:id", userRepo.DeleteUser)
 
 	return r
 }
