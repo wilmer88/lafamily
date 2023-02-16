@@ -1,5 +1,5 @@
 {
-	"ImportPath": ".",
+	"ImportPath": "github.com/heroku/go-getting-started",
 	"GoVersion": "go1.20",
 	"GodepVersion": "v80",
 	"Packages": [
