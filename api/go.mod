@@ -1,11 +1,11 @@
-module github.com/wilmer88/lafamily/api
+module example.com/m/v2
 
 go 1.20
 
 require (
-	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-gonic/gin v1.8.2
 	github.com/heroku/x v0.0.55
+	github.com/wilmer88/lafamily/api v0.0.0-20230215193806-ef5cc7f9bd6f
 	gorm.io/driver/mysql v1.4.6
 	gorm.io/gorm v1.24.5
 )

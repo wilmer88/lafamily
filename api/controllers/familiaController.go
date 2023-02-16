@@ -29,24 +29,26 @@ func New() *Familia {
 //create user
 func (repository *Familia) CreateUser(c *gin.Context) {
 	var member models.Fammember
-	c.BindJSON(&member)
+	c.ShouldBindJSON(&member)
 	err := models.CreateUser(repository.Db, &member)
 	if err != nil {
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err})
 		return
 	}
 	c.JSON(http.StatusOK, member)
+	// return member nil,
+
 }
 
 //get users
-func (repository *Familia) GetUsers(c *gin.Context) {
-	var Fammember []models.Fammember
-	err := models.GetUsers(repository.Db, &Fammember)
+func (tabla *Familia) GetUsers(c *gin.Context) {
+	var member []models.Fammember
+	err := models.GetUsers(tabla.Db, &member)
 	if err != nil {
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err})
 		return
 	}
-	c.JSON(http.StatusOK, Fammember)
+	c.JSON(http.StatusOK, member)
 }
 
 //get user by id
